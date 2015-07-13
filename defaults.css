@@ -1,0 +1,250 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+//
+//  ADOBE SYSTEMS INCORPORATED
+//  Copyright 2011 Adobe Systems Incorporated
+//  All Rights Reserved.
+//
+//  NOTICE: Adobe permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+*/
+@namespace "library://ns.adobe.com/flex/spark";
+@namespace ios "spark.skins.ios.*";
+
+/* default sizes apply to application-dpi: 160 */
+/* don't use the back button style for cancel buttons in a modal view */
+.cancelStyle
+{
+    skinClass: ClassReference("spark.skins.ios.BeveledActionButtonSkin");
+}
+
+.dialogDefaultButton:up
+{
+    chromeColor: #535D78;
+}
+
+ActionBar
+{
+    paddingTop: 0;
+    paddingBottom: 0;
+    paddingLeft: 0;
+    paddingRight: 0;
+/*    chromeColor: #6D84A2;*/
+/*	chromeColor: #215081;*/
+	chromeColor: #315d9e;
+    defaultButtonAppearance: beveled;
+    skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
+}
+
+ActionBar.beveled Group#navigationGroup Button
+{
+    chromeColor: #6D84A2;
+    fontSize: 12;
+    skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
+}
+
+ActionBar.beveled Group#actionGroup Button
+{
+    chromeColor: #6D84A2;
+    fontSize: 12;
+    skinClass: ClassReference("spark.skins.ios.BeveledActionButtonSkin");
+}
+
+ActionBar #titleDisplay
+{
+    fontSize: 20;
+}
+
+Button
+{
+    color: #101010;
+/*    chromeColor: #B4B8BF;*/
+	chromeColor: #f6f6f6;
+    skinClass: ClassReference("spark.skins.ios.ButtonSkin");
+}
+
+Button:down
+{
+    chromeColor: #898D94;
+}
+
+HScrollBar
+{
+    skinClass: ClassReference("spark.skins.ios.HScrollBarSkin");
+}
+
+/* set chromeColor on thumb */
+HScrollBar Button
+{
+    chromeColor: #000000;
+}
+
+List
+{
+    alternatingItemColors: #FFFFFF;
+    contentBackgroundColor: #FFFFFF;
+    downColor: #015DE6;
+    selectionColor: #FFFFFF;
+}
+
+TabbedViewNavigator #tabBar
+{
+    chromeColor: #000000;
+    color: #FFFFFF;
+    fontSize: 11;
+    fontWeight: bold;
+    iconPlacement: top;
+    interactionMode: mouse;
+    skinClass: ClassReference("spark.skins.ios.TabbedViewNavigatorTabBarSkin");
+    textShadowAlpha: 0;
+}
+
+TabbedViewNavigator ButtonBarButton:up
+{
+    color: #CCCCCC;
+}
+
+Scroller
+{
+    verticalScrollPolicy: on;
+}
+
+TitleWindow
+{
+    color: #FFFFFF;
+    skinClass: ClassReference("spark.skins.ios.TitleWindowSkin");
+}
+
+TitleWindow #titleDisplay
+{
+    fontWeight: bold;
+}
+
+TitleWindow Button
+{
+    chromeColor: #0F1539;
+    color: #FFFFFF;
+    skinClass: ClassReference("spark.skins.ios.TitleWindowButtonSkin");
+    textShadowColor: #999999;
+}
+
+TitleWindow Button.emphasized
+{
+    chromeColor: #3F4564;
+    skinClass: ClassReference("spark.skins.ios.TitleWindowButtonSkin");
+}
+
+TitleWindow Button:down
+{
+    chromeColor: #000000;
+}
+
+View
+{
+    skinClass: ClassReference("spark.skins.ios.ViewSkin");
+}
+
+ViewMenu
+{
+    color: #FFFFFF;
+    contentBackgroundColor: #000000;
+    contentBackgroundAlpha: 0.6;
+    fontSize: 20;
+    fontWeight: bold;
+    textShadowColor: #666666;
+    skinClass: ClassReference("spark.skins.ios.ViewMenuSkin");
+}
+
+ViewMenu #cancelButton
+{
+    color: #FFFFFF;
+    chromeColor: #000000;
+}
+
+ViewMenu #cancelButton:down
+{
+    chromeColor: #0000FF;
+}
+
+ViewMenuItem
+{
+    iconPlacement: left;
+    color: #000000;
+    textShadowAlpha: 0;
+    skinClass: ClassReference("spark.skins.ios.ViewMenuItemSkin");
+}
+
+ViewMenuItem:down
+{
+    chromeColor: #0000FF;
+    color: #FFFFFF;
+    textShadowColor: #000000;
+}
+
+VScrollBar
+{
+    skinClass: ClassReference("spark.skins.ios.VScrollBarSkin");
+}
+
+/* set chromeColor on thumb */
+VScrollBar Button
+{
+    chromeColor: #000000;
+}
+
+/* FIXME (jasonsj): why does the font size change when this global rule is used? */
+/*global
+{
+    modalTransparency: 0.5;
+    modalTransparencyBlur: 3;
+    modalTransparencyColor: #333333;
+    modalTransparencyDuration: 100;
+}*/
+
+@media (application-dpi: 320)
+{
+    ActionBar #titleDisplay
+    {
+        fontSize: 36;
+    }
+    
+    ActionBar.beveled Group#navigationGroup Button, ActionBar.beveled Group#actionGroup Button
+    {
+        fontSize: 24;
+    }
+    
+    ViewMenuItem
+    {
+        fontSize: 36;
+    }
+    
+    TabbedViewNavigator #tabBar
+    {
+        fontSize: 20;
+    }
+}
+
+@media (application-dpi: 240)
+{
+    ActionBar #titleDisplay
+    {
+        fontSize: 28;
+    }
+    
+    ActionBar.beveled Group#navigationGroup Button, ActionBar.beveled Group#actionGroup Button
+    {
+        fontSize: 18;
+    }
+    
+    ViewMenuItem
+    {
+        fontSize: 28;
+    }
+    
+    TabbedViewNavigator #tabBar
+    {
+        fontSize: 16;
+    }
+}
