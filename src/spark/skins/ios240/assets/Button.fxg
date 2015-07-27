@@ -15,9 +15,9 @@ in accordance with the terms of the license agreement accompanying it.
         <fill>
           <SolidColor color="#FFFFFF"/>
         </fill>
-        <filters>
-          <DropShadowFilter blurX="2" blurY="2" quality="2" alpha="0.75" angle="90" distance="1"/>
-        </filters>
+        <!--  <filters>
+          <DropShadowFilter blurX="2" blurY="2" quality="2" alpha="0.75" angle="90" distance="0"/>
+        </filters> -->
       </Rect>
       <Path alpha="0.5" winding="nonZero" data="M223.5 0 7.5 0C3.35742 0 0 3.35742 0 7.5L0 9C0 4.85742 3.35742 1.5 7.5 1.5L223.5 1.5C227.642 1.5 231 4.85742 231 9L231 7.5C231 3.35742 227.642 0 223.5 0Z">
         <fill>

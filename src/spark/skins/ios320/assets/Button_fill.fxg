@@ -14,8 +14,8 @@ in accordance with the terms of the license agreement accompanying it.
       <Rect width="308" height="76" radiusX="9.99753" radiusY="9.99753">
         <fill>
           <LinearGradient x="154" y="0" scaleX="76" rotation="90">
-            <GradientEntry ratio="0" color="#f6f6f6"/>
-            <GradientEntry ratio="1" color="#f6f6f6"/>
+            <GradientEntry ratio="0" color="#fafafa"/>
+            <GradientEntry ratio="1" color="#fafafa"/>
           </LinearGradient>
         </fill>
       </Rect>

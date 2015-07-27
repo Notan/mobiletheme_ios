@@ -23,9 +23,9 @@ in accordance with the terms of the license agreement accompanying it.
         <fill>
           <LinearGradient x="29.9995" y="0" scaleX="54.1939" rotation="90">
             <GradientEntry ratio="0" color="#323232" alpha="0.9"/>
-            <GradientEntry ratio="0.1" color="#313131" alpha="0.8"/>
-            <GradientEntry ratio="0.2" color="#444444" alpha="0.8"/>
-            <GradientEntry ratio="1" color="#7D7D7D" alpha="0.8"/>
+            <GradientEntry ratio="0" color="#313131" alpha="0.8"/>
+            <GradientEntry ratio="0" color="#444444" alpha="0.8"/>
+            <GradientEntry ratio="0" color="#7D7D7D" alpha="0.8"/>
           </LinearGradient>
         </fill>
       </Path>
