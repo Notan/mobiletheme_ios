@@ -201,6 +201,13 @@ VScrollBar Button
     chromeColor: #000000;
 }
 
+ToggleSwitch
+{
+	accentColor: #cdd2c3;
+	chromeColor: #a0d468;
+	skinClass: ClassReference("spark.skins.ios.ToggleSwitchSkin");
+}
+
 /* FIXME (jasonsj): why does the font size change when this global rule is used? */
 /*global
 {
