@@ -38,11 +38,18 @@ ActionBar
     skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
 }
 
+
 ActionBar.beveled Group#navigationGroup Button
 {
-    chromeColor: #6D84A2;
+	color: #26816a;
+    chromeColor: #37bc9b;
     fontSize: 12;
     skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
+}
+ActionBar.beveled Group#navigationGroup Button:down
+{
+	color: #ffffff;
+	chromeColor: #48cfad;
 }
 
 ActionBar.beveled Group#actionGroup Button

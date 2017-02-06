@@ -11,20 +11,14 @@
 
 package spark.skins.ios
 {
-import flash.display.DisplayObject;
-
-import mx.core.DPIClassification;
-import mx.core.mx_internal;
-
-import spark.skins.ios160.assets.BeveledBackButton;
-import spark.skins.ios160.assets.BeveledBackButton_fill;
-import spark.skins.ios240.assets.BeveledBackButton;
-import spark.skins.ios240.assets.BeveledBackButton_fill;
-import spark.skins.ios320.assets.BeveledBackButton;
-import spark.skins.ios320.assets.BeveledBackButton_fill;
-import spark.skins.mobile.ButtonSkin;
-
-use namespace mx_internal;
+	import flash.display.DisplayObject;
+	
+	import mx.core.DPIClassification;
+	import mx.core.mx_internal;
+	
+	import spark.skins.mobile.ButtonSkin;
+	
+	use namespace mx_internal;
 
 /**
  *  iOS-styled ActionBar Button skin for use in the navigationContent
@@ -39,25 +33,15 @@ use namespace mx_internal;
  */
 public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
 {
-    
-    //--------------------------------------------------------------------------
-    //
-    //  Constructor
-    //
-    //--------------------------------------------------------------------------
-    
-    /**
-     *  Constructor.
-     * 
-     *  @langversion 3.0
-     *  @playerversion Flash 10
-     *  @playerversion AIR 2.5 
-     *  @productversion Flex 4.5
-     */
+	private static const DEFAULT_FILL_COLOR:Number = 0xf6f6f6;
+	
     public function BeveledBackButtonSkin()
     {
         super();
-        
+		
+		borderSkin = EmptyField;
+		downBorderSkin = EmptyField;
+		
         switch (applicationDPI)
         {
             case DPIClassification.DPI_320:
@@ -66,13 +50,12 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
                 layoutPaddingTop = 0;
                 layoutPaddingBottom = 0;
                 layoutPaddingLeft = 30;
-                layoutPaddingRight = 20;
+                layoutPaddingRight = 30;
                 measuredDefaultWidth = 60;
                 measuredDefaultHeight = 60;
-                
-                upBorderSkin = spark.skins.ios320.assets.BeveledBackButton;
-                downBorderSkin = spark.skins.ios320.assets.BeveledBackButton;
-                fillClass = spark.skins.ios320.assets.BeveledBackButton_fill;
+				layoutCornerEllipseSize = 10;
+//				borderSkin = spark.skins.ios320.assets.BeveledBackButton;
+//              downBorderSkin = spark.skins.ios320.assets.BeveledBackButton_fill;
                 
                 break;
             }
@@ -82,13 +65,12 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
                 layoutPaddingTop = 0;
                 layoutPaddingBottom = 0;
                 layoutPaddingLeft = 22;
-                layoutPaddingRight = 15;
+                layoutPaddingRight = 22;
                 measuredDefaultWidth = 45;
                 measuredDefaultHeight = 45;
-                
-                upBorderSkin = spark.skins.ios240.assets.BeveledBackButton;
-                downBorderSkin = spark.skins.ios240.assets.BeveledBackButton;
-                fillClass = spark.skins.ios240.assets.BeveledBackButton_fill;
+				layoutCornerEllipseSize = 7;
+//				borderSkin = spark.skins.ios240.assets.BeveledBackButton;
+//				downBorderSkin = spark.skins.ios240.assets.BeveledBackButton_fill;
                 
                 break;
             }
@@ -99,14 +81,13 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
                 layoutPaddingTop = 0;
                 layoutPaddingBottom = 0;
                 layoutPaddingLeft = 15;
-                layoutPaddingRight = 10;
+                layoutPaddingRight = 15;
                 measuredDefaultWidth = 30;
                 measuredDefaultHeight = 30;
-                
-                upBorderSkin = spark.skins.ios160.assets.BeveledBackButton;
-                downBorderSkin = spark.skins.ios160.assets.BeveledBackButton;
-                fillClass = spark.skins.ios160.assets.BeveledBackButton_fill;
-                
+				layoutCornerEllipseSize = 5;
+//				borderSkin = spark.skins.ios160.assets.BeveledBackButton;
+//				downBorderSkin = spark.skins.ios160.assets.BeveledBackButton_fill;
+				
                 break;
             }
         }
@@ -114,70 +95,71 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
         // beveled buttons do not scale down
         minHeight = measuredDefaultHeight;
     }
-    
-    //--------------------------------------------------------------------------
-    //
-    //  Variables
-    //
-    //--------------------------------------------------------------------------
-    
-    public static const FILL_COLOR_UP:Number = 0x444444;
-    
-    public static const FILL_COLOR_DOWN:Number = 0x666666;
-    
-    private var _fill:DisplayObject;
-    
-    private var fillClass:Class;
-    
-    private var colorized:Boolean;
-    
-    //--------------------------------------------------------------------------
-    //
-    //  Overridden methods
-    //
-    //--------------------------------------------------------------------------
-    
-    /**
-     *  @private
-     */
-    override protected function layoutContents(unscaledWidth:Number, unscaledHeight:Number):void
-    {
-        super.layoutContents(unscaledWidth, unscaledHeight);
-        
-        // add separate chromeColor fill graphic as the first layer
-        if (!_fill && fillClass)
-        {
-            _fill = new fillClass();
-            addChildAt(_fill, 1);
-        }
-        
-        if (_fill)
-        {
-            // move to the first layer
-            if (getChildIndex(_fill) != 1)
-            {
-                removeChild(_fill);
-                addChildAt(_fill, 1);
-            }
-            
-            setElementSize(_fill, unscaledWidth, unscaledHeight);
-        }
-    }
-    
-    override protected function drawBackground(unscaledWidth:Number, unscaledHeight:Number):void
-    {
-        // omit call to super.drawBackground(), apply tint instead and don't draw fill
-        var chromeColor:uint = getStyle("chromeColor");
-        var offsetColor:uint = (currentState.indexOf("down") == 0) ? FILL_COLOR_DOWN : FILL_COLOR_UP;
-        
-        if (colorized || (chromeColor != offsetColor))
-        {
-            // apply tint instead of fill
-            applyColorTransform(_fill, offsetColor, chromeColor);
-            
-            // if we restore to original color, unset colorized
-            colorized = (chromeColor != offsetColor);
-        }
-    }
+	
+	//--------------------------------------------------------------------------
+	//
+	//  Variables
+	//
+	//--------------------------------------------------------------------------
+	
+	protected var borderSkin:Class;
+	
+	protected var labelDisplayShadowOffset:Number;
+	
+	protected var colorized:Boolean;
+	
+	protected var borderBackground:DisplayObject;
+	
+	//--------------------------------------------------------------------------
+	//
+	//  Overridden methods
+	//
+	//--------------------------------------------------------------------------
+	
+	override protected function createChildren():void
+	{
+		borderBackground = (new borderSkin() as DisplayObject);
+		addChild(borderBackground);
+		
+		super.createChildren();
+	}
+	
+	override protected function layoutContents(unscaledWidth:Number, unscaledHeight:Number):void
+	{
+		super.layoutContents(unscaledWidth, unscaledHeight);
+		
+		// move border to 0;
+		removeChild(borderBackground);
+		addChildAt(borderBackground, 0);
+		
+		setElementSize(borderBackground, unscaledWidth, unscaledHeight);
+		setElementPosition(labelDisplayShadow, labelDisplay.x, labelDisplay.y + labelDisplayShadowOffset);
+		labelDisplayShadow.alpha = 0;
+	}
+	
+	override protected function drawBackground(unscaledWidth:Number, unscaledHeight:Number):void
+	{
+		super.drawBackground(unscaledWidth, unscaledHeight);
+		border.visible = 0;
+		//graphics.clear();
+		
+		var chromeColor:uint = getStyle(fillColorStyleName);
+		
+		// In the down state, the fill shadow is defined in the FXG asset
+		graphics.beginFill(chromeColor);
+		
+		// inset chrome color by BORDER_SIZE
+		// bottom line is a shadow
+		graphics.drawRoundRect(layoutBorderSize, layoutBorderSize, 
+		unscaledWidth - (layoutBorderSize * 2), 
+		unscaledHeight - (layoutBorderSize * 2), 
+		layoutCornerEllipseSize, layoutCornerEllipseSize);
+		graphics.endFill();
+	}
+	
+	protected function get defaultFillColor():Number
+	{
+		return DEFAULT_FILL_COLOR;
+	}
 }
 }
