@@ -391,10 +391,8 @@ package spark.skins.ios
 			super.drawBackground(unscaledWidth, unscaledHeight);
 			
 			// calculate skin dimensions - outer stroke
-			var calculatedContentWidth:Number = Math.max(unscaledWidth - 2 * layoutBorderSize, 
-				getElementPreferredWidth(thumb));
-			var calculatedContentHeight:Number = Math.max(unscaledHeight - 2 * layoutBorderSize, 
-				getElementPreferredHeight(thumb));
+			var calculatedContentWidth:Number = Math.max(unscaledWidth - 2 * layoutBorderSize, getElementPreferredWidth(thumb));
+			var calculatedContentHeight:Number = Math.max(unscaledHeight - 2 * layoutBorderSize, getElementPreferredHeight(thumb));
 			
 			drawSlidingContent(calculatedContentWidth, calculatedContentHeight);
 			drawTrack(calculatedContentWidth, calculatedContentHeight);
@@ -402,12 +400,12 @@ package spark.skins.ios
 			drawMask(calculatedContentWidth, calculatedContentHeight);
 			
 			// simulate outer stroke using a larger filled rounded rect
-			graphics.beginFill(0xffffff, 0.3);
+			graphics.beginFill(getStyle("chromeColor"));
 			
-//			graphics.drawRoundRect(0, (calculatedContentHeight - layoutThumbHeight) / 2, 
-//				calculatedContentWidth + 2 * layoutBorderSize, 
-//				layoutThumbHeight + 2 * layoutBorderSize, 
-//				layoutCornerEllipseSize + layoutBorderSize);
+			graphics.drawRoundRect(0, (calculatedContentHeight - layoutThumbHeight) / 2, 
+				calculatedContentWidth + 2 * layoutBorderSize, 
+				layoutThumbHeight + 2 * layoutBorderSize, 
+				layoutCornerEllipseSize + layoutBorderSize);
 		}
 		
 		/**
@@ -588,7 +586,7 @@ package spark.skins.ios
 			graphics.drawRoundRect(layoutStrokeWeight / 2, layoutStrokeWeight / 2, 
 				skinWidth - layoutStrokeWeight, 
 				(layoutThumbHeight - layoutStrokeWeight), (layoutCornerEllipseSize - layoutStrokeWeight / 2));
-//			graphics.lineStyle();
+			graphics.lineStyle();
 		}
 		
 		/**
