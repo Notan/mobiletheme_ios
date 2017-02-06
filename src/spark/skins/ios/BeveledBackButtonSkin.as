@@ -39,6 +39,7 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
     {
         super();
 		
+		upBorderSkin = EmptyField;
 		borderSkin = EmptyField;
 		downBorderSkin = EmptyField;
 		
@@ -140,8 +141,6 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
 	override protected function drawBackground(unscaledWidth:Number, unscaledHeight:Number):void
 	{
 		super.drawBackground(unscaledWidth, unscaledHeight);
-		border.visible = 0;
-		//graphics.clear();
 		
 		var chromeColor:uint = getStyle(fillColorStyleName);
 		
