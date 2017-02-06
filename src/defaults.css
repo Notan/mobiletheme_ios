@@ -33,7 +33,7 @@ ActionBar
     paddingRight: 0;
 /*    chromeColor: #6D84A2;*/
 /*	chromeColor: #215081;*/
-	chromeColor: #315d9e;
+	chromeColor: #37bc9b;
     defaultButtonAppearance: beveled;
     skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
 }

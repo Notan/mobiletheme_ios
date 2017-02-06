@@ -432,36 +432,10 @@ public class ActionBarSkin extends MobileSkin
         
         var chromeColor:uint = getStyle("chromeColor");
         var backgroundAlphaValue:Number = getStyle("backgroundAlpha");
-        var colors:Array = [];
-        
-        // apply alpha to chromeColor fill only
-        var backgroundAlphas:Array = [backgroundAlphaValue, backgroundAlphaValue, backgroundAlphaValue, backgroundAlphaValue];
-        
-        // exclude top and bottom 1px borders
-        colorMatrix.createGradientBox(unscaledWidth, unscaledHeight, Math.PI / 2, 0, 0);
-        
-        /*colors[0] = ColorUtil.adjustBrightness2(chromeColor, 40);
-        colors[1] = ColorUtil.adjustBrightness2(chromeColor, 20);*/
-		colors[0] = ColorUtil.adjustBrightness2(chromeColor, 10);
-		colors[1] = chromeColor;
-		colors[2] = chromeColor;
-        colors[3] = chromeColor;
-        
-        // glossy fill
-        graphics.beginGradientFill(GradientType.LINEAR, colors, backgroundAlphas, ThemeConstants.CHROME_COLOR_RATIOS, colorMatrix);
-        graphics.drawRect(0, 0, unscaledWidth, unscaledHeight);
-        graphics.endFill();
-        
-        // top border light
-        var borderInset:uint = borderWeight / 2;
-        graphics.lineStyle(borderWeight, 0xFFFFFF, 0.3, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.MITER);
-        graphics.moveTo(0, borderInset);
-        graphics.lineTo(unscaledWidth, borderInset);
-        
-        // bottom border dark
-        graphics.lineStyle(borderWeight, 0, 0.6, false, LineScaleMode.NORMAL, CapsStyle.NONE, JointStyle.MITER);
-        graphics.moveTo(0, unscaledHeight - borderInset);
-        graphics.lineTo(unscaledWidth, unscaledHeight - borderInset)
+		
+		graphics.beginFill(chromeColor);
+		graphics.drawRect(0, 0, unscaledWidth, unscaledHeight);
+		graphics.endFill();
     }
     
 }
@@ -486,7 +460,7 @@ use namespace mx_internal;
 class TitleDisplayComponent extends UIComponent implements IDisplayText
 {
     private var titleDisplay:StyleableTextField;
-    private var titleDisplayShadow:StyleableTextField;
+//    private var titleDisplayShadow:StyleableTextField;
     private var title:String;
     private var titleChanged:Boolean;
     private var _realTextHeight:Number;
@@ -515,19 +489,19 @@ class TitleDisplayComponent extends UIComponent implements IDisplayText
         titleDisplay.selectable = false;
         titleDisplay.multiline = false;
         titleDisplay.wordWrap = false;
-        titleDisplay.addEventListener(FlexEvent.VALUE_COMMIT,
-            titleDisplay_valueCommitHandler);
-        
-        titleDisplayShadow =
-            StyleableTextField(createInFontContext(StyleableTextField));
-        titleDisplayShadow.styleName = this;
-        titleDisplayShadow.colorName = "textShadowColor";
-        titleDisplayShadow.editable = false;
-        titleDisplayShadow.selectable = false;
-        titleDisplayShadow.multiline = false;
-        titleDisplayShadow.wordWrap = false;
-        
-        addChild(titleDisplayShadow);
+//        titleDisplay.addEventListener(FlexEvent.VALUE_COMMIT,
+//            titleDisplay_valueCommitHandler);
+//        
+//        titleDisplayShadow =
+//            StyleableTextField(createInFontContext(StyleableTextField));
+//        titleDisplayShadow.styleName = this;
+//        titleDisplayShadow.colorName = "textShadowColor";
+//        titleDisplayShadow.editable = false;
+//        titleDisplayShadow.selectable = false;
+//        titleDisplayShadow.multiline = false;
+//        titleDisplayShadow.wordWrap = false;
+//        
+//        addChild(titleDisplayShadow);
         addChild(titleDisplay);
     }
     
@@ -590,25 +564,25 @@ class TitleDisplayComponent extends UIComponent implements IDisplayText
         // now truncate the text
         titleDisplay.truncateToFit();
         
-        titleDisplayShadow.commitStyles();
-        titleDisplayShadow.setLayoutBoundsPosition(0, -1);
-        titleDisplayShadow.setLayoutBoundsSize(unscaledWidth, unscaledHeight);
-        
-        titleDisplayShadow.alpha = getStyle("textShadowAlpha");
+//        titleDisplayShadow.commitStyles();
+//        titleDisplayShadow.setLayoutBoundsPosition(0, -1);
+//        titleDisplayShadow.setLayoutBoundsSize(unscaledWidth, unscaledHeight);
+//        
+//        titleDisplayShadow.alpha = getStyle("textShadowAlpha");
         
         // if labelDisplay is truncated, then push it down here as well.
         // otherwise, it would have gotten pushed in the labelDisplay_valueCommitHandler()
-        if (titleDisplay.isTruncated)
-            titleDisplayShadow.text = titleDisplay.text;
+//        if (titleDisplay.isTruncated)
+//            titleDisplayShadow.text = titleDisplay.text;
     }
     
     /**
      *  @private 
      */ 
-    private function titleDisplay_valueCommitHandler(event:Event):void 
-    {
-        titleDisplayShadow.text = titleDisplay.text;
-    }
+//    private function titleDisplay_valueCommitHandler(event:Event):void 
+//    {
+//        titleDisplayShadow.text = titleDisplay.text;
+//    }
     
     public function get text():String
     {
