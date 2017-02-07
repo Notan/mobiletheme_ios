@@ -13,6 +13,10 @@
 @namespace "library://ns.adobe.com/flex/spark";
 @namespace ios "spark.skins.ios.*";
 
+/*, Label{
+	fontFamily: "HelveticaNeueCyr-Roman";
+}
+*/
 /* default sizes apply to application-dpi: 160 */
 /* don't use the back button style for cancel buttons in a modal view */
 .cancelStyle
@@ -54,9 +58,15 @@ ActionBar.beveled Group#navigationGroup Button:down
 
 ActionBar.beveled Group#actionGroup Button
 {
-    chromeColor: #6D84A2;
-    fontSize: 12;
-    skinClass: ClassReference("spark.skins.ios.BeveledActionButtonSkin");
+	color: #26816a;
+	chromeColor: #37bc9b;
+	fontSize: 12;
+    skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
+}
+ActionBar.beveled Group#actionGroup Button:down
+{
+	color: #ffffff;
+	chromeColor: #48cfad;
 }
 
 ActionBar #titleDisplay
@@ -92,7 +102,7 @@ List
 {
     alternatingItemColors: #FFFFFF;
     contentBackgroundColor: #FFFFFF;
-    downColor: #015DE6;
+    downColor: #ebf0e1;
     selectionColor: #FFFFFF;
 }
 
@@ -150,6 +160,9 @@ TitleWindow Button:down
 
 View
 {
+	color:#434a54;
+	chromeColor: #e6e9ed;
+	fontSize: 12;
     skinClass: ClassReference("spark.skins.ios.ViewSkin");
 }
 
@@ -203,11 +216,26 @@ VScrollBar Button
 
 ToggleSwitch
 {
-	accentColor: #cdd2c3;
-	chromeColor: #a0d468;
+	accentColor: #a0d468;
+	chromeColor: #cdd2c3;
 	skinClass: ClassReference("spark.skins.ios.ToggleSwitchSkin");
 }
-
+NumericStepper
+{
+	/*	color	*/
+	color: #656d78;
+	contentBackgroundColor: #e6e9ed;
+	/*
+	focusedTextSelectionColor: #000000;
+	unfocusedTextSelectionColor: #000000;
+	*/
+	skinClass: ClassReference("spark.skins.ios.CustomNumericStepperSkin");
+}
+NumericStepper Button
+{
+	color: #656d78;
+	chromeColor: #ccd1d9;
+}
 /* FIXME (jasonsj): why does the font size change when this global rule is used? */
 /*global
 {
