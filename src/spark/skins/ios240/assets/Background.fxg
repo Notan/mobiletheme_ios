@@ -13,12 +13,12 @@ in accordance with the terms of the license agreement accompanying it.
   
     <Rect width="8" height="460">
       <fill>
-        <SolidColor color="#ccd2da"/>
+        <SolidColor color="#ececec"/>
       </fill>
     </Rect>
    <!--<Rect x="5" width="2" height="460">
       <fill>
-        <SolidColor color="#ccd2da"/>
+        <SolidColor color="#ececec"/>
       </fill>
     </Rect>-->
 

@@ -1,6 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Licensed to the Apache Software Foundation (ASF) under one or more
+//  contributor license agreements.  See the NOTICE file distributed with
+//  this work for additional information regarding copyright ownership.
+//  The ASF licenses this file to You under the Apache License, Version 2.0
+//  (the "License"); you may not use this file except in compliance with
+//  the License.  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//
+////////////////////////////////////////////////////////////////////////////////
+
 package spark.skins.ios
 {
-	
 	import flash.display.BlendMode;
 	import flash.display.DisplayObject;
 	import flash.display.GradientType;
@@ -17,13 +35,19 @@ package spark.skins.ios
 	import spark.components.ToggleSwitch;
 	import spark.components.supportClasses.StyleableTextField;
 	import spark.core.SpriteVisualElement;
+	import spark.skins.ios.assets.ToggleSwitch_contentShadow;
+	import spark.skins.ios160.assets.ToggleSwitch_contentShadow;
+	import spark.skins.ios240.assets.ToggleSwitch_contentShadow;
+	import spark.skins.ios320.assets.ToggleSwitch_contentShadow;
+	import spark.skins.ios480.assets.ToggleSwitch_contentShadow;
+	import spark.skins.ios640.assets.ToggleSwitch_contentShadow;
 	import spark.skins.mobile.supportClasses.MobileSkin;
 	import spark.skins.mobile120.assets.ToggleSwitch_contentShadow;
 	import spark.skins.mobile160.assets.ToggleSwitch_contentShadow;
 	import spark.skins.mobile240.assets.ToggleSwitch_contentShadow;
 	import spark.skins.mobile320.assets.ToggleSwitch_contentShadow;
-	
-	import org.hamcrest.mxml.object.Null;
+	import spark.skins.mobile480.assets.ToggleSwitch_contentShadow;
+	import spark.skins.mobile640.assets.ToggleSwitch_contentShadow;
 	
 	use namespace mx_internal;
 	
@@ -56,9 +80,34 @@ package spark.skins.ios
 		public function ToggleSwitchSkin()
 		{
 			super();
-			//*
+			
 			switch(applicationDPI) 
-			{
+			{	
+				case DPIClassification.DPI_640:
+				{
+					layoutThumbWidth = 94;
+					layoutThumbHeight = 56;
+					layoutStrokeWeight = 2;
+					layoutBorderSize = 2;
+					layoutTextShadowOffset = -2;
+					layoutInnerPadding = 14;
+					layoutOuterPadding = 22;
+					slidingContentOverlayClass =  spark.skins.ios640.assets.ToggleSwitch_contentShadow;
+					break;
+				}
+				case DPIClassification.DPI_480:
+				{
+					// Note provisional may need changes
+					layoutThumbWidth = 140;
+					layoutThumbHeight = 84;
+					layoutStrokeWeight = 2;
+					layoutBorderSize = 2;
+					layoutTextShadowOffset = -2;
+					layoutInnerPadding = 20;
+					layoutOuterPadding = 34;
+					slidingContentOverlayClass = spark.skins.ios480.assets.ToggleSwitch_contentShadow;
+					break;
+				}		
 				case DPIClassification.DPI_320:
 				{
 					layoutThumbWidth = 94;
@@ -68,7 +117,7 @@ package spark.skins.ios
 					layoutTextShadowOffset = -2;
 					layoutInnerPadding = 14;
 					layoutOuterPadding = 22;
-//					slidingContentOverlayClass = spark.skins.mobile320.assets.ToggleSwitch_contentShadow;
+					slidingContentOverlayClass = spark.skins.ios320.assets.ToggleSwitch_contentShadow;
 					break;
 				}
 				case DPIClassification.DPI_240:
@@ -80,7 +129,7 @@ package spark.skins.ios
 					layoutTextShadowOffset = -1;
 					layoutInnerPadding = 10;
 					layoutOuterPadding = 17;
-//					slidingContentOverlayClass = spark.skins.mobile240.assets.ToggleSwitch_contentShadow;
+					slidingContentOverlayClass = spark.skins.ios240.assets.ToggleSwitch_contentShadow;
 					break;
 				}
 				case DPIClassification.DPI_120:
@@ -92,7 +141,7 @@ package spark.skins.ios
 					layoutTextShadowOffset = -1;
 					layoutInnerPadding = 5;
 					layoutOuterPadding = 8;
-//					slidingContentOverlayClass = spark.skins.mobile120.assets.ToggleSwitch_contentShadow;
+					slidingContentOverlayClass = spark.skins.ios.assets.ToggleSwitch_contentShadow;
 					break;
 				}
 				default:
@@ -104,25 +153,12 @@ package spark.skins.ios
 					layoutTextShadowOffset = -1;
 					layoutInnerPadding = 7;
 					layoutOuterPadding = 11;
-//					slidingContentOverlayClass = spark.skins.mobile160.assets.ToggleSwitch_contentShadow;
+					slidingContentOverlayClass = spark.skins.ios160.assets.ToggleSwitch_contentShadow;
 					break;
 				}
-				
 			}
-			/**/
-			/*
-			layoutThumbWidth = 35;
-			layoutThumbHeight = 21;
-			layoutBorderSize = 1;
-			layoutTextShadowOffset = -1;
-			layoutInnerPadding = 5;
-			layoutOuterPadding = 8;
-			slidingContentOverlayClass = ToggleSwitch_contentShadow;
-			*/
 			
-			layoutStrokeWeight = 0;
-			slidingContentOverlayClass = EmptyField;
-			layoutCornerEllipseSize = 8;//layoutThumbHeight;
+			layoutCornerEllipseSize = layoutThumbHeight;
 			selectedLabel = resourceManager.getString("components","toggleSwitchSelectedLabel");
 			unselectedLabel =  resourceManager.getString("components","toggleSwitchUnselectedLabel");
 		}
@@ -391,8 +427,10 @@ package spark.skins.ios
 			super.drawBackground(unscaledWidth, unscaledHeight);
 			
 			// calculate skin dimensions - outer stroke
-			var calculatedContentWidth:Number = Math.max(unscaledWidth - 2 * layoutBorderSize, getElementPreferredWidth(thumb));
-			var calculatedContentHeight:Number = Math.max(unscaledHeight - 2 * layoutBorderSize, getElementPreferredHeight(thumb));
+			var calculatedContentWidth:Number = Math.max(unscaledWidth - 2 * layoutBorderSize, 
+				getElementPreferredWidth(thumb));
+			var calculatedContentHeight:Number = Math.max(unscaledHeight - 2 * layoutBorderSize, 
+				getElementPreferredHeight(thumb));
 			
 			drawSlidingContent(calculatedContentWidth, calculatedContentHeight);
 			drawTrack(calculatedContentWidth, calculatedContentHeight);
@@ -400,12 +438,12 @@ package spark.skins.ios
 			drawMask(calculatedContentWidth, calculatedContentHeight);
 			
 			// simulate outer stroke using a larger filled rounded rect
-			graphics.beginFill(getStyle("chromeColor"));
-			
+			graphics.beginFill(0xffffff, 0.3);
 			graphics.drawRoundRect(0, (calculatedContentHeight - layoutThumbHeight) / 2, 
 				calculatedContentWidth + 2 * layoutBorderSize, 
 				layoutThumbHeight + 2 * layoutBorderSize, 
 				layoutCornerEllipseSize + layoutBorderSize);
+			graphics.endFill();
 		}
 		
 		/**
@@ -536,17 +574,16 @@ package spark.skins.ios
 		 */
 		private function drawSlidingContent(skinWidth:Number, skinHeight:Number):void 
 		{
-			var color:String = (hostComponent.selected) ? "accentColor" : "chromeColor";
 			slidingContentBackground.graphics.clear();
 			
 			// selected side of the sliding content
-			slidingContentBackground.graphics.beginFill(getStyle(color));
+			slidingContentBackground.graphics.beginFill(getStyle("accentColor"));
 			slidingContentBackground.graphics.drawRect(layoutThumbWidth - skinWidth, 0, skinWidth - layoutThumbWidth / 2, 
 				layoutThumbHeight);
 			slidingContentBackground.graphics.endFill();
 			
 			// unselected side of the sliding content
-			slidingContentBackground.graphics.beginFill(getStyle(color));
+			slidingContentBackground.graphics.beginFill(ColorUtil.adjustBrightness2(getStyle("chromeColor"), -25));
 			slidingContentBackground.graphics.drawRect(layoutThumbWidth / 2, 0, skinWidth - layoutThumbWidth / 2, 
 				layoutThumbHeight);
 			slidingContentBackground.graphics.endFill();
@@ -582,7 +619,7 @@ package spark.skins.ios
 		{
 			var graphics:Graphics = SpriteVisualElement(track).graphics;
 			graphics.clear();
-//			graphics.lineStyle(layoutStrokeWeight, 0, .3);
+			graphics.lineStyle(layoutStrokeWeight, 0, .3);
 			graphics.drawRoundRect(layoutStrokeWeight / 2, layoutStrokeWeight / 2, 
 				skinWidth - layoutStrokeWeight, 
 				(layoutThumbHeight - layoutStrokeWeight), (layoutCornerEllipseSize - layoutStrokeWeight / 2));
@@ -604,13 +641,78 @@ package spark.skins.ios
 		 */
 		private function drawThumb(skinWidth:Number, skinHeight:Number):void 
 		{
-			//if (currentState && currentState.indexOf("down") >= 0)
-			var indentThumb:Number = 2;
 			var graphics:Graphics = thumbContent.graphics;
+			var colors:Array = [];
+			var alphas:Array = [];
+			var ratios:Array = [];
+			var baseColor:Number = getStyle("chromeColor");
+			
+			if (currentState && currentState.indexOf("down") >= 0)
+				baseColor = ColorUtil.adjustBrightness(baseColor, -60);
+			
 			graphics.clear();
-			graphics.beginFill(0xffffff);
-			graphics.drawRoundRect(indentThumb, indentThumb, layoutThumbWidth - indentThumb * 2, layoutThumbHeight - indentThumb * 2, layoutCornerEllipseSize);
+			
+			// Thumb outline
+			colors[0] = ColorUtil.adjustBrightness2(baseColor, -70);
+			colors[1] = ColorUtil.adjustBrightness2(baseColor, -55);
+			
+			alphas[0] = 1;
+			alphas[1] = 1;
+			
+			ratios[0] = 0;
+			ratios[1] = 255;
+			
+			colorMatrix.createGradientBox(layoutThumbWidth, layoutThumbHeight, Math.PI / 2);
+			graphics.beginGradientFill(GradientType.LINEAR, colors, alphas, ratios, colorMatrix);
+			graphics.drawRoundRect(0, 0, layoutThumbWidth, layoutThumbHeight, layoutCornerEllipseSize);
 			graphics.endFill();
+			
+			// Base gradient fill, one stroke weight inside outline
+			colors[0] = ColorUtil.adjustBrightness2(baseColor, -30);
+			colors[1] = baseColor;
+			colors[2] = ColorUtil.adjustBrightness2(baseColor, 20);
+			
+			alphas[2] = 1;
+			
+			ratios[0] = 0;
+			ratios[1] = .7 * 255;
+			ratios[2] = 255;
+			
+			colorMatrix.createGradientBox(layoutThumbWidth - layoutStrokeWeight * 2, 
+				layoutThumbHeight - layoutStrokeWeight * 2, Math.PI / 2);
+			graphics.beginGradientFill(GradientType.LINEAR, colors, alphas, ratios, colorMatrix);
+			graphics.drawRoundRect(layoutStrokeWeight, layoutStrokeWeight, 
+				layoutThumbWidth - layoutStrokeWeight * 2, 
+				layoutThumbHeight - layoutStrokeWeight * 2, layoutCornerEllipseSize - layoutStrokeWeight * 2);
+			graphics.endFill();
+			
+			// Thumb highlight, one stroke weight inside outline
+			colors[0] = 0xffffff;
+			colors[1] = 0xffffff;
+			colors[2] = 0x0;
+			
+			alphas[0] = .9;
+			alphas[1] = 0;
+			alphas[2] = .2;
+			
+			ratios[0] = .33 * 255;
+			ratios[1] = .5 * 255;
+			ratios[2] = 255;
+			
+			colorMatrix.createGradientBox(layoutThumbWidth - layoutStrokeWeight * 3, 
+				layoutThumbHeight - layoutStrokeWeight * 3, Math.PI / 2);
+			graphics.lineStyle(layoutStrokeWeight);
+			graphics.lineGradientStyle(GradientType.LINEAR, colors, alphas, ratios, colorMatrix);
+			graphics.drawRoundRect(layoutStrokeWeight * 1.5, layoutStrokeWeight * 1.5, 
+				layoutThumbWidth - layoutStrokeWeight * 3, layoutThumbHeight - layoutStrokeWeight * 3, 
+				layoutCornerEllipseSize - layoutStrokeWeight * 3);
+			graphics.lineStyle();
+			
+			// Redraw the erase overlay as a silhouette of the thumb
+			thumbEraseOverlay.graphics.clear();
+			thumbEraseOverlay.graphics.beginFill(0);
+			thumbEraseOverlay.graphics.drawRoundRect(0, 0, layoutThumbWidth, layoutThumbHeight, layoutCornerEllipseSize);
+			thumbEraseOverlay.graphics.endFill();
 		}
 		
 		/**
@@ -731,7 +833,7 @@ class LabelDisplayComponent extends UIComponent implements IDisplayText
 		labelDisplayShadow.selectable = false;
 		labelDisplayShadow.multiline = false;
 		labelDisplayShadow.wordWrap = false;
-		labelDisplayShadow.visible = false;
+		
 		addChild(labelDisplayShadow);
 		addChild(labelDisplay);
 	}
@@ -811,6 +913,6 @@ class LabelDisplayComponent extends UIComponent implements IDisplayText
 	
 	public function showShadow(value:Boolean):void 
 	{
-		labelDisplayShadow.visible = !value;
+		labelDisplayShadow.visible = value;
 	}
 }

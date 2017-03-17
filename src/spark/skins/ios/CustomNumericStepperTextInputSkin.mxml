@@ -101,6 +101,19 @@ limitations under the License.
 					textDisplay.left = textDisplay.top = textDisplay.right = textDisplay.bottom = 0;
 				}
 				
+				border.topLeftRadiusX = border.topLeftRadiusY = 
+					shadow.topLeftRadiusX = shadow.topLeftRadiusY = 
+						background.topLeftRadiusX = background.topLeftRadiusY = 4;
+				border.bottomLeftRadiusX = border.bottomLeftRadiusX = 
+					shadow.bottomLeftRadiusX = shadow.bottomLeftRadiusX = 
+						background.bottomLeftRadiusX = background.bottomLeftRadiusX = 4;
+				border.topRightRadiusX = border.topRightRadiusX = 
+					shadow.topRightRadiusX = shadow.topRightRadiusX = 
+						background.topRightRadiusX = background.topRightRadiusX = 0;
+				border.bottomRightRadiusX = border.bottomRightRadiusX = 
+					shadow.bottomRightRadiusX = shadow.bottomRightRadiusX = 
+					background.bottomRightRadiusX = background.bottomRightRadiusX = 0;
+				
 //				borderStroke.color = getStyle("borderColor");
 				borderStroke.alpha = getStyle("borderAlpha");
 				
@@ -118,7 +131,7 @@ limitations under the License.
 	
 	<!-- border --> 
 	<!--- @private -->
-	<s:Rect left="0" right="0" top="0" bottom="0" id="border">
+	<s:Rect left="0" right="0" top="0" bottom="0" id="border" >
 		<s:stroke>   
 			<!--- @private -->
 			<s:SolidColorStroke id="borderStroke" weight="1" color="#e6e9ed" />
@@ -127,7 +140,7 @@ limitations under the License.
 	
 	<!-- fill -->
 	<!--- Defines the appearance of the NumericStepper component's background. -->
-	<s:Rect id="background" left="1" right="1" top="1" bottom="1">
+	<s:Rect id="background" left="1" right="1" top="1" bottom="1" >
 		<s:fill>
 			<!--- @private
 			Defines the background fill of the NumericStepper component's background. -->

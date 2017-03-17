@@ -154,6 +154,8 @@ public class BeveledBackButtonSkin extends spark.skins.mobile.ButtonSkin
 		unscaledHeight - (layoutBorderSize * 2), 
 		layoutCornerEllipseSize, layoutCornerEllipseSize);
 		graphics.endFill();
+		var st:String = getStyle('fontFamily');
+		trace('fontFamily:' + st);
 	}
 	
 	protected function get defaultFillColor():Number

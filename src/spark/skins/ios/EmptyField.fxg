@@ -13,7 +13,7 @@ in accordance with the terms of the license agreement accompanying it.
   
     <Rect width="5" height="5">
       <fill>
-        <SolidColor color="#ccd2da" alpha="0"/>
+        <SolidColor color="#ff0000" alpha="0"/>
       </fill>
     </Rect>
 </Graphic>

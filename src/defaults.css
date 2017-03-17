@@ -13,10 +13,6 @@
 @namespace "library://ns.adobe.com/flex/spark";
 @namespace ios "spark.skins.ios.*";
 
-/*, Label{
-	fontFamily: "HelveticaNeueCyr-Roman";
-}
-*/
 /* default sizes apply to application-dpi: 160 */
 /* don't use the back button style for cancel buttons in a modal view */
 .cancelStyle
@@ -35,8 +31,6 @@ ActionBar
     paddingBottom: 0;
     paddingLeft: 0;
     paddingRight: 0;
-/*    chromeColor: #6D84A2;*/
-/*	chromeColor: #215081;*/
 	chromeColor: #37bc9b;
     defaultButtonAppearance: beveled;
     skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
@@ -61,6 +55,7 @@ ActionBar.beveled Group#actionGroup Button
 	color: #26816a;
 	chromeColor: #37bc9b;
 	fontSize: 12;
+	fontFamily:mainfont;
     skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
 }
 ActionBar.beveled Group#actionGroup Button:down
@@ -74,11 +69,14 @@ ActionBar #titleDisplay
     fontSize: 20;
 }
 
+
+
 Button
 {
-    color: #101010;
+    color: #a0d468;
 /*    chromeColor: #B4B8BF;*/
 	chromeColor: #f6f6f6;
+	fontSize:14;
     skinClass: ClassReference("spark.skins.ios.ButtonSkin");
 }
 
@@ -103,7 +101,8 @@ List
     alternatingItemColors: #FFFFFF;
     contentBackgroundColor: #FFFFFF;
     downColor: #ebf0e1;
-    selectionColor: #FFFFFF;
+    selectionColor: #e6e9ed;
+	skinClass: ClassReference("spark.skins.ios.ListSkin");
 }
 
 TabbedViewNavigator #tabBar
@@ -139,19 +138,34 @@ TitleWindow #titleDisplay
     fontWeight: bold;
 }
 
-TitleWindow Button
+TitleWindow #closeButton
+{
+	color: #FFFFFF;
+	chromeColor: #a0d468;
+	skinClass: ClassReference("spark.skins.ios.CloseButtonTittleWindowSkin");
+}
+
+Callout
+{
+	backgroundColor:#FF0000;
+	skinClass: ClassReference("spark.skins.ios.CalloutTitleWindowSkin");
+}
+
+/*TitleWindow Button
 {
     chromeColor: #0F1539;
     color: #FFFFFF;
     skinClass: ClassReference("spark.skins.ios.TitleWindowButtonSkin");
     textShadowColor: #999999;
-}
+}*/
 
-TitleWindow Button.emphasized
+/*TitleWindow Button.emphasized
 {
     chromeColor: #3F4564;
     skinClass: ClassReference("spark.skins.ios.TitleWindowButtonSkin");
-}
+}*/
+
+
 
 TitleWindow Button:down
 {
@@ -231,6 +245,7 @@ NumericStepper
 	*/
 	skinClass: ClassReference("spark.skins.ios.CustomNumericStepperSkin");
 }
+
 NumericStepper Button
 {
 	color: #656d78;
@@ -244,6 +259,7 @@ NumericStepper Button
     modalTransparencyColor: #333333;
     modalTransparencyDuration: 100;
 }*/
+
 
 @media (application-dpi: 320)
 {

@@ -49,7 +49,6 @@ public class ButtonSkin extends spark.skins.mobile.ButtonSkin
                 layoutPaddingBottom = 0;
                 measuredDefaultWidth = 254;
                 measuredDefaultHeight = 86;
-                
                 labelDisplayShadowOffset = 2;
                 
                 break;

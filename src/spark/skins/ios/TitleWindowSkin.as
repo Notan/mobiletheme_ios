@@ -148,7 +148,8 @@ public class TitleWindowSkin extends MobileSkin
         {
             closeButton = new Button();
             closeButton.id = "closeButton";
-            closeButton.label = "Close";
+            closeButton.label = "X";
+			closeButton.minWidth = 0;
             addChild(closeButton);
         }
     }
@@ -240,8 +241,13 @@ public class TitleWindowSkin extends MobileSkin
         // controlBarGroup/closeButton is pinned to the bottom
         var controlBarHeight:Number = getElementPreferredHeight(controlBarComp);
         var controlBarY:Number = unscaledHeight - paddingBottom - controlBarHeight;
-        setElementSize(controlBarComp, w, controlBarHeight);
-        setElementPosition(controlBarComp, paddingLeft, controlBarY);
+		if (_showControlBar) {
+	        setElementSize(controlBarComp, w, controlBarHeight);
+    	    setElementPosition(controlBarComp, paddingLeft, controlBarY);
+		} else {
+			setElementSize(controlBarComp, getElementPreferredWidth(controlBarComp), controlBarHeight);
+			setElementPosition(controlBarComp, w-getElementPreferredWidth(closeButton), controlBarHeight);
+		}
         
         // contentGroup fills in the remaining space
         var contentY:Number = paddingTop + titleHeight + verticalGap;

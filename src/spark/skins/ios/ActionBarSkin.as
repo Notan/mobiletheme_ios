@@ -24,6 +24,7 @@ import mx.utils.ColorUtil;
 
 import spark.components.ActionBar;
 import spark.components.Group;
+import spark.components.Label;
 import spark.components.supportClasses.StyleableTextField;
 import spark.core.SpriteVisualElement;
 import spark.layouts.HorizontalAlign;
@@ -147,7 +148,7 @@ public class ActionBarSkin extends MobileSkin
      *  Wraps a StyleableTextField in a UIComponent to be compatible with
      *  ViewTransition effects.
      */
-    public var titleDisplay:TitleDisplayComponent;
+    public var titleDisplay:Label;
     
     //--------------------------------------------------------------------------
     //
@@ -190,7 +191,7 @@ public class ActionBarSkin extends MobileSkin
         actionGroup.layout = hLayout;
         actionGroup.id = "actionGroup";
         
-        titleDisplay = new TitleDisplayComponent();
+        titleDisplay = new Label();
         titleDisplay.id = "titleDisplay";
         
         addChild(navigationGroup);
@@ -276,6 +277,22 @@ public class ActionBarSkin extends MobileSkin
             {
                 titleDisplay.setStyle("textAlign", titleAlign);
             }
+        }
+		
+        if (styleProp == "fontFamily")
+        {
+            var fontFamily:String = getStyle("fontFamily");
+			titleDisplay.setStyle("fontFamily", fontFamily);
+            /*if (fontFamily == "mainFont")
+            { 
+                // If the title align is set to center, the alignment is set to LEFT
+                // so that the skin can manually center the component in layoutContents
+                titleDisplay.setStyle("textAlign", TextFormatAlign.LEFT);
+            }
+            else
+            {
+                titleDisplay.setStyle("textAlign", titleAlign);
+            }*/
         }
     }
     
@@ -419,7 +436,7 @@ public class ActionBarSkin extends MobileSkin
             // check for negative width
             titleCompWidth = (titleCompWidth < 0) ? 0 : titleCompWidth;
             
-            setElementSize(titleDisplay, titleCompWidth, titleDisplay.realTextHeight);
+            setElementSize(titleDisplay, titleCompWidth, titleDisplay.height);
             setElementPosition(titleDisplay, titleCompX, titleCompY);
             
             titleDisplay.visible = true;
