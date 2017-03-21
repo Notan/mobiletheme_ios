@@ -38,7 +38,8 @@
     <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.OTF" sourcePath="fonts/MYRIADARABIC-REGULAR.OTF"/>
     <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.afm" sourcePath="fonts/MYRIADARABIC-REGULAR.afm"/>
     <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.ttf" sourcePath="fonts/MYRIADARABIC-REGULAR.ttf"/>
-    <resourceEntry destPath="fonts/XB Roya.ttf" sourcePath="fonts/XB Roya.ttf"/>
+    <resourceEntry destPath="fonts/XB-Roya.afm" sourcePath="fonts/XB-Roya.afm"/>
+    <resourceEntry destPath="fonts/XB-Roya.ttf" sourcePath="fonts/XB-Roya.ttf"/>
     <resourceEntry destPath="fonts/arabic_farsi.TTF" sourcePath="fonts/arabic_farsi.TTF"/>
     <resourceEntry destPath="fonts/arabic_farsi.afm" sourcePath="fonts/arabic_farsi.afm"/>
     <resourceEntry destPath="fonts/test.map" sourcePath="fonts/test.map"/>
