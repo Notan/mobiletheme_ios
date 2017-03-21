@@ -25,7 +25,7 @@ import spark.skins.ios.HScrollBarSkin; HScrollBarSkin;
 import spark.skins.ios.TabbedViewNavigatorTabBarSkin; TabbedViewNavigatorTabBarSkin;
 import spark.skins.ios.TabbedViewNavigatorTabBarTabSkin; TabbedViewNavigatorTabBarTabSkin;
 import spark.skins.ios.VScrollBarSkin; VScrollBarSkin;
-[Embed(source="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf",
+/*[Embed(source="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf",
                     fontFamily="mainfont",
                     mimeType="application/x-font",
                     embedAsCFF="true")]
@@ -34,7 +34,7 @@ private const ACaslonProRegularEmbeddedFont:Class;
                     fontFamily="mainfont",
 					fontWeight="bold",
                     mimeType="application/x-font",
-                    embedAsCFF="true")]
+                    embedAsCFF="true")]*/
 private const ACaslonProRegularEmbeddedFontBold:Class;
 }
 }

@@ -12,9 +12,6 @@
   </includeClasses>
   <includeResources>
     <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
-    <resourceEntry destPath="fonts/ARIALUNI.TTF" sourcePath="fonts/ARIALUNI.TTF"/>
-    <resourceEntry destPath="fonts/BCompset.afm" sourcePath="fonts/BCompset.afm"/>
-    <resourceEntry destPath="fonts/BCompset.ttf" sourcePath="fonts/BCompset.ttf"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf" sourcePath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Bold.ttf" sourcePath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Bold.ttf"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf"/>
@@ -35,15 +32,7 @@
     <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf" sourcePath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf"/>
-    <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.OTF" sourcePath="fonts/MYRIADARABIC-REGULAR.OTF"/>
-    <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.afm" sourcePath="fonts/MYRIADARABIC-REGULAR.afm"/>
-    <resourceEntry destPath="fonts/MYRIADARABIC-REGULAR.ttf" sourcePath="fonts/MYRIADARABIC-REGULAR.ttf"/>
-    <resourceEntry destPath="fonts/XB-Roya.afm" sourcePath="fonts/XB-Roya.afm"/>
-    <resourceEntry destPath="fonts/XB-Roya.ttf" sourcePath="fonts/XB-Roya.ttf"/>
-    <resourceEntry destPath="fonts/arabic_farsi.TTF" sourcePath="fonts/arabic_farsi.TTF"/>
-    <resourceEntry destPath="fonts/arabic_farsi.afm" sourcePath="fonts/arabic_farsi.afm"/>
-    <resourceEntry destPath="fonts/test.map" sourcePath="fonts/test.map"/>
-    <resourceEntry destPath="fonts/test2.map" sourcePath="fonts/test2.map"/>
+    <resourceEntry destPath="fonts/arabtype.ttf" sourcePath="fonts/arabtype.ttf"/>
     <resourceEntry destPath="spark/skins/ios/EmptyField.fxg" sourcePath="spark/skins/ios/EmptyField.fxg"/>
     <resourceEntry destPath="spark/skins/ios/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios/ToggleSwitch_contentShadow.fxg"/>
     <resourceEntry destPath="spark/skins/ios/assets/Blank.fxg" sourcePath="spark/skins/ios/assets/Blank.fxg"/>
