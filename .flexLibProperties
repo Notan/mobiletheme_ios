@@ -1,89 +1,160 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="true" version="3">
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="true" version="3">
   <includeClasses>
-    <classEntry path="spark.skins.ios.ViewSkin"/>
-    <classEntry path="spark.skins.ios.TitleWindowButtonSkin"/>
-    <classEntry path="spark.skins.ios.NumericStepperSkin"/>
-    <classEntry path="spark.skins.ios.ListSkin"/>
-    <classEntry path="spark.skins.ios.LabelItemRenderer"/>
-    <classEntry path="spark.skins.ios.CloseButtonTittleWindowSkin"/>
+    <classEntry path="IOSThemeClasses"/>
+    <classEntry path="spark.skins.ios.ActionBarSkin"/>
+    <classEntry path="spark.skins.ios.BeveledActionButtonSkin"/>
+    <classEntry path="spark.skins.ios.BeveledBackButtonSkin"/>
+    <classEntry path="spark.skins.ios.ButtonSkin"/>
     <classEntry path="spark.skins.ios.CalloutTitleWindowSkin"/>
+    <classEntry path="spark.skins.ios.CloseButtonTittleWindowSkin"/>
+    <classEntry path="spark.skins.ios.CustomNumericStepperDecrementButtonSkin"/>
+    <classEntry path="spark.skins.ios.CustomNumericStepperIncrementButtonSkin"/>
+    <classEntry path="spark.skins.ios.CustomNumericStepperSkin"/>
+    <classEntry path="spark.skins.ios.CustomNumericStepperTextInputSkin"/>
+    <classEntry path="spark.skins.ios.EmptyField"/>
+    <classEntry path="spark.skins.ios.HScrollBarSkin"/>
+    <classEntry path="spark.skins.ios.HScrollBarThumbSkin"/>
+    <classEntry path="spark.skins.ios.LabelItemRenderer"/>
+    <classEntry path="spark.skins.ios.ListSkin"/>
+    <classEntry path="spark.skins.ios.NumericStepperSkin"/>
+    <classEntry path="spark.skins.ios.TabbedViewNavigatorTabBarSkin"/>
+    <classEntry path="spark.skins.ios.TabbedViewNavigatorTabBarTabSkin"/>
+    <classEntry path="spark.skins.ios.ThemeConstants"/>
+    <classEntry path="spark.skins.ios.TitleWindowButtonSkin"/>
+    <classEntry path="spark.skins.ios.TitleWindowSkin"/>
+    <classEntry path="spark.skins.ios.ToggleSwitchSkin"/>
+    <classEntry path="spark.skins.ios.ToggleSwitch_contentShadow"/>
+    <classEntry path="spark.skins.ios.VScrollBarSkin"/>
+    <classEntry path="spark.skins.ios.VScrollBarThumbSkin"/>
+    <classEntry path="spark.skins.ios.ViewMenuItemSkin"/>
+    <classEntry path="spark.skins.ios.ViewMenuSkin"/>
+    <classEntry path="spark.skins.ios.ViewSkin"/>
+    <classEntry path="spark.skins.ios.assets.Blank"/>
+    <classEntry path="spark.skins.ios.assets.ToggleSwitch_contentShadow"/>
     <classEntry path="spark.skins.ios.supportClasses.CalloutArrow"/>
+    <classEntry path="spark.skins.ios160.assets.Background"/>
+    <classEntry path="spark.skins.ios160.assets.BeveledActionButton"/>
+    <classEntry path="spark.skins.ios160.assets.BeveledActionButton_fill"/>
+    <classEntry path="spark.skins.ios160.assets.BeveledBackButton"/>
+    <classEntry path="spark.skins.ios160.assets.BeveledBackButton_fill"/>
+    <classEntry path="spark.skins.ios160.assets.Button"/>
+    <classEntry path="spark.skins.ios160.assets.Button_fill"/>
+    <classEntry path="spark.skins.ios160.assets.TabbedViewNavigatorTabBarTab_selected"/>
+    <classEntry path="spark.skins.ios160.assets.TitleWindowBackground"/>
+    <classEntry path="spark.skins.ios160.assets.TitleWindowButton"/>
+    <classEntry path="spark.skins.ios160.assets.TitleWindowButton_fill"/>
+    <classEntry path="spark.skins.ios160.assets.ToggleSwitch_contentShadow"/>
+    <classEntry path="spark.skins.ios160.assets.ViewMenuItem"/>
+    <classEntry path="spark.skins.ios160.assets.ViewMenuItem_fillDown"/>
+    <classEntry path="spark.skins.ios160.assets.ViewMenuItem_fillUp"/>
+    <classEntry path="spark.skins.ios240.assets.Background"/>
+    <classEntry path="spark.skins.ios240.assets.BeveledActionButton"/>
+    <classEntry path="spark.skins.ios240.assets.BeveledActionButton_fill"/>
+    <classEntry path="spark.skins.ios240.assets.BeveledBackButton"/>
+    <classEntry path="spark.skins.ios240.assets.BeveledBackButton_fill"/>
+    <classEntry path="spark.skins.ios240.assets.Button"/>
+    <classEntry path="spark.skins.ios240.assets.Button_fill"/>
+    <classEntry path="spark.skins.ios240.assets.TabbedViewNavigatorTabBarTab_selected"/>
+    <classEntry path="spark.skins.ios240.assets.TitleWindowBackground"/>
+    <classEntry path="spark.skins.ios240.assets.TitleWindowButton"/>
+    <classEntry path="spark.skins.ios240.assets.TitleWindowButton_fill"/>
+    <classEntry path="spark.skins.ios240.assets.ToggleSwitch_contentShadow"/>
+    <classEntry path="spark.skins.ios240.assets.ViewMenuItem"/>
+    <classEntry path="spark.skins.ios240.assets.ViewMenuItem_fillDown"/>
+    <classEntry path="spark.skins.ios240.assets.ViewMenuItem_fillUp"/>
+    <classEntry path="spark.skins.ios320.assets.Background"/>
+    <classEntry path="spark.skins.ios320.assets.BeveledActionButton"/>
+    <classEntry path="spark.skins.ios320.assets.BeveledActionButton_fill"/>
+    <classEntry path="spark.skins.ios320.assets.BeveledBackButton"/>
+    <classEntry path="spark.skins.ios320.assets.BeveledBackButton_fill"/>
+    <classEntry path="spark.skins.ios320.assets.Button"/>
+    <classEntry path="spark.skins.ios320.assets.Button_fill"/>
+    <classEntry path="spark.skins.ios320.assets.TabbedViewNavigatorTabBarTab_selected"/>
+    <classEntry path="spark.skins.ios320.assets.TitleWindowBackground"/>
+    <classEntry path="spark.skins.ios320.assets.TitleWindowButton"/>
+    <classEntry path="spark.skins.ios320.assets.TitleWindowButton_fill"/>
+    <classEntry path="spark.skins.ios320.assets.ToggleSwitch_contentShadow"/>
+    <classEntry path="spark.skins.ios320.assets.ViewMenuItem"/>
+    <classEntry path="spark.skins.ios320.assets.ViewMenuItem_fillDown"/>
+    <classEntry path="spark.skins.ios320.assets.ViewMenuItem_fillUp"/>
+    <classEntry path="spark.skins.ios480.assets.ToggleSwitch_contentShadow"/>
+    <classEntry path="spark.skins.ios640.assets.ToggleSwitch_contentShadow"/>
   </includeClasses>
   <includeResources>
-    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf" sourcePath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios320/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios240/assets/ToggleSwitch_contentShadow.fxg"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Bold.ttf" sourcePath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Bold.ttf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BlackItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BlackItalic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BoldItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BoldItalic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Italic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Italic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-LightItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-LightItalic.otf"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios240/assets/TitleWindowButton.fxg"/>
     <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItaicl.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItaicl.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-ThinItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-ThinItalic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf"/>
-    <resourceEntry destPath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf" sourcePath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf"/>
-    <resourceEntry destPath="fonts/arabtype.ttf" sourcePath="fonts/arabtype.ttf"/>
-    <resourceEntry destPath="spark/skins/ios/EmptyField.fxg" sourcePath="spark/skins/ios/EmptyField.fxg"/>
-    <resourceEntry destPath="spark/skins/ios/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios/ToggleSwitch_contentShadow.fxg"/>
-    <resourceEntry destPath="spark/skins/ios/assets/Blank.fxg" sourcePath="spark/skins/ios/assets/Blank.fxg"/>
-    <resourceEntry destPath="spark/skins/ios/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios/assets/ToggleSwitch_contentShadow.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/Background.fxg" sourcePath="spark/skins/ios160/assets/Background.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios160/assets/BeveledActionButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios160/assets/BeveledActionButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios160/assets/BeveledBackButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios160/assets/BeveledBackButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/Button.fxg" sourcePath="spark/skins/ios160/assets/Button.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/Button_fill.fxg" sourcePath="spark/skins/ios160/assets/Button_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios160/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowBackground.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowButton_fill.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios160/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios160/assets/ToggleSwitch_contentShadow.fxg"/>
     <resourceEntry destPath="spark/skins/ios160/assets/ViewMenuItem.fxg" sourcePath="spark/skins/ios160/assets/ViewMenuItem.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowButton.fxg"/>
     <resourceEntry destPath="spark/skins/ios160/assets/ViewMenuItem_fillDown.fxg" sourcePath="spark/skins/ios160/assets/ViewMenuItem_fillDown.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/ViewMenuItem_fillUp.fxg" sourcePath="spark/skins/ios320/assets/ViewMenuItem_fillUp.fxg"/>
+    <resourceEntry destPath="spark/skins/ios/assets/Blank.fxg" sourcePath="spark/skins/ios/assets/Blank.fxg"/>
     <resourceEntry destPath="spark/skins/ios160/assets/ViewMenuItem_fillUp.fxg" sourcePath="spark/skins/ios160/assets/ViewMenuItem_fillUp.fxg"/>
     <resourceEntry destPath="spark/skins/ios240/assets/Background.fxg" sourcePath="spark/skins/ios240/assets/Background.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios240/assets/BeveledActionButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios240/assets/BeveledActionButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios240/assets/BeveledBackButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios240/assets/BeveledBackButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/Button.fxg" sourcePath="spark/skins/ios240/assets/Button.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/Button_fill.fxg" sourcePath="spark/skins/ios240/assets/Button_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios240/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios240/assets/TitleWindowBackground.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios240/assets/TitleWindowButton.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf" sourcePath="fonts/HelveticaNeueCyr/Helvetica Neue Condensed Black.ttf"/>
     <resourceEntry destPath="spark/skins/ios240/assets/TitleWindowButton_fill.fxg" sourcePath="spark/skins/ios240/assets/TitleWindowButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios240/assets/ToggleSwitch_contentShadow.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem_fillDown.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem_fillDown.fxg"/>
-    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem_fillUp.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem_fillUp.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/Background.fxg" sourcePath="spark/skins/ios320/assets/Background.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios320/assets/BeveledActionButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios320/assets/BeveledActionButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios320/assets/BeveledBackButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios320/assets/BeveledBackButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/Button.fxg" sourcePath="spark/skins/ios320/assets/Button.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/Button_fill.fxg" sourcePath="spark/skins/ios320/assets/Button_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios320/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowBackground.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowButton.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowButton_fill.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowButton_fill.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios320/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios160/assets/BeveledBackButton.fxg"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/Button_fill.fxg" sourcePath="spark/skins/ios160/assets/Button_fill.fxg"/>
     <resourceEntry destPath="spark/skins/ios320/assets/ViewMenuItem.fxg" sourcePath="spark/skins/ios320/assets/ViewMenuItem.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/ViewMenuItem_fillDown.fxg" sourcePath="spark/skins/ios320/assets/ViewMenuItem_fillDown.fxg"/>
-    <resourceEntry destPath="spark/skins/ios320/assets/ViewMenuItem_fillUp.fxg" sourcePath="spark/skins/ios320/assets/ViewMenuItem_fillUp.fxg"/>
-    <resourceEntry destPath="spark/skins/ios480/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios480/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Heavy.otf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios160/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf" sourcePath="fonts/HelveticaNeueCyr/Tahoma_Bold.ttf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios160/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/Button.fxg" sourcePath="spark/skins/ios320/assets/Button.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios240/assets/TitleWindowBackground.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem_fillUp.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem_fillUp.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios240/assets/BeveledBackButton.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios160/assets/BeveledActionButton_fill.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-HeavyItalic.otf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios160/assets/BeveledActionButton.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/Button_fill.fxg" sourcePath="spark/skins/ios320/assets/Button_fill.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowBackground.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowBackground.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowBackground.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios320/assets/BeveledActionButton_fill.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-ThinItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-ThinItalic.otf"/>
+    <resourceEntry destPath="defaults.css" sourcePath="defaults.css"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/Background.fxg" sourcePath="spark/skins/ios160/assets/Background.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios320/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BoldItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BoldItalic.otf"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/Button_fill.fxg" sourcePath="spark/skins/ios240/assets/Button_fill.fxg"/>
+    <resourceEntry destPath="fonts/BFerdosi.ttf" sourcePath="fonts/BFerdosi.ttf"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/BeveledBackButton.fxg" sourcePath="spark/skins/ios320/assets/BeveledBackButton.fxg"/>
+    <resourceEntry destPath="spark/skins/ios/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios320/assets/BeveledBackButton_fill.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/BeveledActionButton_fill.fxg" sourcePath="spark/skins/ios240/assets/BeveledActionButton_fill.fxg"/>
     <resourceEntry destPath="spark/skins/ios640/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios640/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/Button.fxg" sourcePath="spark/skins/ios240/assets/Button.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/ViewMenuItem_fillDown.fxg" sourcePath="spark/skins/ios320/assets/ViewMenuItem_fillDown.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem_fillDown.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem_fillDown.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/TitleWindowButton_fill.fxg" sourcePath="spark/skins/ios320/assets/TitleWindowButton_fill.fxg"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowButton_fill.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowButton_fill.fxg"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios160/assets/BeveledBackButton_fill.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-LightItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-LightItalic.otf"/>
+    <resourceEntry destPath="spark/skins/ios/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/ViewMenuItem.fxg" sourcePath="spark/skins/ios240/assets/ViewMenuItem.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/BeveledBackButton_fill.fxg" sourcePath="spark/skins/ios240/assets/BeveledBackButton_fill.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/Background.fxg" sourcePath="spark/skins/ios320/assets/Background.fxg"/>
+    <resourceEntry destPath="spark/skins/ios480/assets/ToggleSwitch_contentShadow.fxg" sourcePath="spark/skins/ios480/assets/ToggleSwitch_contentShadow.fxg"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/Button.fxg" sourcePath="spark/skins/ios160/assets/Button.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black.otf"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItaicl.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItaicl.otf"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios240/assets/BeveledActionButton.fxg"/>
+    <resourceEntry destPath="spark/skins/ios240/assets/TabbedViewNavigatorTabBarTab_selected.fxg" sourcePath="spark/skins/ios240/assets/TabbedViewNavigatorTabBarTab_selected.fxg"/>
+    <resourceEntry destPath="spark/skins/ios/EmptyField.fxg" sourcePath="spark/skins/ios/EmptyField.fxg"/>
+    <resourceEntry destPath="spark/skins/ios320/assets/BeveledActionButton.fxg" sourcePath="spark/skins/ios320/assets/BeveledActionButton.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Italic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-Italic.otf"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BlackItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-BlackItalic.otf"/>
+    <resourceEntry destPath="spark/skins/ios160/assets/TitleWindowButton.fxg" sourcePath="spark/skins/ios160/assets/TitleWindowButton.fxg"/>
+    <resourceEntry destPath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf" sourcePath="fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLightItalic.otf"/>
   </includeResources>
   <namespaceManifests/>
 </flexLibProperties>
