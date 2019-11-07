@@ -55,7 +55,7 @@ ActionBar.beveled Group#actionGroup Button
 	color: #26816a;
 	chromeColor: #37bc9b;
 	fontSize: 12;
-	fontFamily:mainfont;
+	fontFamily: mainfont;
     skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
 }
 ActionBar.beveled Group#actionGroup Button:down
